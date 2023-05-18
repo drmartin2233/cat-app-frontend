@@ -23,7 +23,7 @@ useEffect(() => {
       <h1>Hello Cats!</h1>
       {
         cats.map(cat => (
-          <h2>{ cat.name }</h2>
+          <h2 key={ cat._id }>{ cat.name }</h2>
         ))
       }
     </main>
