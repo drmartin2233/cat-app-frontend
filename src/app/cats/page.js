@@ -21,7 +21,7 @@ return(
         <h1>Hello React</h1>
         <h3><Link href="/">Back to Home</Link></h3>
         { cats.map( cat => (
-            <Link href={`/cats/${cat._id}`} key={cat._id}>{ cat.name }</Link>
+            <Link href={`/cats/${cat._id}`} key={cat._id}><p>{ cat.name }</p></Link>
         ))}
     </main>
 )
