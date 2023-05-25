@@ -1,6 +1,8 @@
 'use client'
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import Link from 'next/link'
+
 
 export default function NewCatForm() {
 const [newCat, setNewCat] = useState({name: "", age: 0})
@@ -31,6 +33,7 @@ const handleSubmit = async (evt) => {
     return(
         <div>
             <h1>New Cat Form</h1>
+            <Link href="/cats">All Cats</Link>
             <form onSubmit= {handleSubmit}>
                 <label for="name">Name:
                 <input type="text" name="name" id="name" onChange={handleChange}/>

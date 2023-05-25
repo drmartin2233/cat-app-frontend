@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation";
+import Link from 'next/link';
 
 export default function Cat({ params }) {
 
@@ -40,7 +41,13 @@ const removedCat = async () => {
         <h2>Here is your cat</h2>
         <h1>Name:{cat.name}</h1>
         <h1>Age:{cat.age}</h1>
+
+        <Link href={'/cats/${cat._id}/edit'}>Edit this cat</Link>
+
         <button onClick={removedCat}>Remove Cat</button>
+        
+        <br></br>
+
       </div>
     )
   }

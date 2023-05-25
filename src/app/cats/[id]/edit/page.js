@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
+import Link from 'next/link';
 
 
 export default function EditCat({ params }) {
@@ -47,6 +48,8 @@ const [cat, setCat] = useState({})
         <>
             <div>
                 <h1>Cat Edit Form</h1>
+                <br></br>
+                <link href={'/cats/${cat._id'}>Back to Cat</link>
                 <form onSubmit= {handleSubmit}>
                     <label for="name">Name:
                     <input type="text" name="name" id="name" onChange={handleChange} value={ cat.name }/>
